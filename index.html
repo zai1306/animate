@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="kk.css">
+    <link href="node_modules/hover.css/css/hover-min.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+        <div class="squares d-flex align-items-center justify-content-center">
+
+            <div class="square" data-x="el">
+                <h1>K</h1>
+            </div>
+            <div class="square">
+                <h1>K</h1>
+            </div>
+            <div class="square">
+                <h1>'s</h1>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <h2 class=" my-element animate__animated animate__hinge animate__delay-2s	">Artwork</h2>
+
+
+    </div>
+    <div class="btn-container">
+
+        <button class="bounce-to-top">Take A Tour</button>
+        <a class="face hide" href="https://www.facebook.com/kksartwork">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+        <a class="insta hide"
+            href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fkksartwork%3Figshid%3D1u24k2eyq5o8u%26fbclid%3DIwAR0025ZSG1KOQu83oZN6eHTOasO0132iBj7nr5GuodUtmE67LtEQfRf1ijs&h=AT2g6gVZS2W1b1GFndl5CEzqpHttJchTh80wfO_QY3fOHWhu0ArieJHQblr9Z8krMLCakm892iL5eoxtm96TS9IcmtFd26MG6z1GaQhgb5FaCreVb0CSm0_H8Xb-ZJhVYdVDbg">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="you hide" href=" https://www.youtube.com/channel/UCtII5ItIpqPUhXCd-RUwklg">
+            <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"
+        integrity="sha512-LfB+BcvR3zBt7ebVskhSWiSbEUiG3p5EcCprkieldsKhBeR6wpnLi0VpWC2GNgVGWP2n/skO8Bx2oKNjUhXCkw=="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <script>
+        anime({
+            targets: '.squares .square',
+            translateY: 170,
+            delay: anime.stagger(100, { direction: 'alternate', }),
+            rotate: anime.stagger([-360, 360]),
+            duration: 5000,
+        });
+
+
+        const button = document.querySelector('button')
+        const body = document.querySelector('body')
+        const contain = document.querySelector('.container')
+        const face = document.querySelector('.face')
+        const insta = document.querySelector('.insta')
+        const you = document.querySelector('.you')
+        console.log(face)
+
+        // button.addEventListener('mouseover', () => {
+        //     body.classList.add('b-g');
+        //     contain.classList.add('hide')
+        //     face.classList.remove('hide')
+        //     insta.classList.remove('hide')
+
+        // })
+        // button.addEventListener('mouseout', () => {
+        //     body.classList.remove('b-g')
+        //     contain.classList.remove('hide')
+        //     face.classList.add('hide')
+        //     insta.classList.add('hide')
+
+
+        // })
+        button.addEventListener('click', () => {
+            body.classList.toggle('b-g');
+            contain.classList.toggle('hide')
+            face.classList.toggle('hide')
+            insta.classList.toggle('hide')
+            you.classList.toggle('hide')
+
+        })
+
+    </script>
+</body>
+
+</html>

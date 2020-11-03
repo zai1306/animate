@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: pink;
+}
+
+.container {
+  margin-top: 100px;
+  height: 50%;
+}
+
+.squares {
+  width: 100%;
+  height: 40%;
+  transform: translateY(-120px);
+}
+
+.square {
+  width: 90px;
+  height: 150px;
+}
+
+.square h1 {
+  font-size: 125px;
+  text-align: center;
+  color: crimson;
+  text-shadow: 10px 10px 15px #000000, 10px 10px 25px #ffffff,
+    10px 10px 15px #000000;
+}
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: hinge; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */
+}
+
+h2 {
+  margin-top: 100px;
+  font-family: "Parisienne", cursive;
+  font-size: 55px;
+  z-index: 10;
+  position: relative;
+}
+
+button {
+  width: 170px;
+  height: 35px;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  font-family: "Parisienne", cursive;
+  border: none;
+  outline: none;
+  background: pink;
+  box-shadow: inset 2px 2px 5px #fff, 2px 2px 5px rgb(248, 149, 166);
+}
+
+.b-g {
+  transition: all 0.6s ease-in-out;
+  background: url(flow.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  outline: 0px;
+}
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  border-radius: 10px;
+  outline: 0px;
+}
+button:hover,
+button:focus,
+button:active {
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+}
+button:hover:before,
+button:focus:before,
+button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-container {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.face ion-icon {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 65%;
+  left: 58%;
+  cursor: pointer;
+}
+
+.insta ion-icon {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 65%;
+  left: 32%;
+  color: blu;
+  cursor: pointer;
+}
+
+.you ion-icon {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 65%;
+  left: 45%;
+  cursor: pointer;
+  color: red;
+}
+.hide {
+  visibility: hidden;
+}
